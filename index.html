@@ -105,8 +105,7 @@
   <div id="screen-menu" class="screen active">
     <canvas class="menu-bg-canvas" id="menu-bg"></canvas>
     <canvas id="scanimate-canvas"></canvas>
-
-    <!-- These exist only for layout reference / font loading -->
+    
     <div class="menu-content">
       <div class="menu-title-wrap">
         <div class="menu-title" id="title-ref"><br>EIGHT</div>
@@ -177,9 +176,9 @@ function setupCanvas(canvas) {
   let startTs = null;
 
   // Timeline sync
-  const GLITCH_START  = 3.0;  // spin-up & edge flicker begins
-  const FADE_START    = 3.4;  // master alpha starts dropping
-  const FADE_END      = 4.4;  // fully gone
+  const GLITCH_START  = 3.0;
+  const FADE_START    = 3.4;
+  const FADE_END      = 4.4; 
 
   // Glitch offset
   const edgeSeeds = EDGES.map(() => Math.random() * Math.PI * 2);
