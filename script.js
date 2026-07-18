@@ -716,7 +716,7 @@ const Game = (() => {
   let maxEnemies = 0;
   let touchX = -1;                      
   let ammoRefillTimer = 0;              
-  const AMMO_REFILL_INTERVAL = 5;      
+  const AMMO_REFILL_INTERVAL = 4;      
   let endSweepFired = false;            
   let shakeIntensity = 0;               
   let shakeDuration  = 0;
@@ -3427,17 +3427,20 @@ const Game = (() => {
 
       // Ship collision
       if (dist(ship.x, ship.y, e.x, e.y) < e.r + 12) {
-        if (run.upgrade === 'OMEGITE') {
-          killEnemy(e);
-          takeDamage(2);
-          return false;
-        } else if (ship.invincible <= 0 && invincibleTimer <= 0) {
-          takeDamage(2);
-          spawnParticles(ship.x, ship.y, '#d42b6a', 8);
-          ship.invincible = hitInvincDuration(1.5); // Phase Fuselage (Titane)
-          return false;
-        }
-      }
+  		if (run.upgrade === 'OMEGITE') {
+  		  killEnemy(e);
+   		  takeDamage(2);
+    	return false;
+  	  } else if (ship.invincible <= 0 && invincibleTimer <= 0) {
+    	  takeDamage(2);
+    	  spawnParticles(ship.x, ship.y, '#d42b6a', 8);
+    	  ship.invincible = hitInvincDuration(1.5); // Phase Fuselage (Titane)
+    	  return false;
+  	  } else if (e.type === 'scout') {
+    	 spawnParticles(e.x, e.y, e.color, 4);
+    	 return false;
+  	  }
+	}
       return e.y < H + 60;
     });
 
@@ -4356,7 +4359,7 @@ function drawParticles() {
     }
     // Sector Level
     ctx.save();
-    ctx.font = 'bold 18px "Nova Square", monospace';
+    ctx.font = 'bold 18px "Nova Square", "Segoe UI Symbol", monospace';
     ctx.fillStyle = '#00f5ff';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -4384,7 +4387,7 @@ function drawParticles() {
  function render(dt) {
   ctx.clearRect(0, 0, W, H);
   ctx.fillStyle = '#050510';
-  ctx.fillRect(0, 0, W, H);  // ← background stays fixed, outside shake
+  ctx.fillRect(0, 0, W, H); 
 
   ctx.save();
   if (shakeDuration > 0) {
@@ -4741,7 +4744,7 @@ function drawParticles() {
         ctx.closePath(); ctx.stroke();
          // Symbol inside
         const pu = STRINGS.powerups[d.key];
-        ctx.font = 'bold 11px Nova Square, monospace';
+        ctx.font = 'bold 11px Nova Square, "Segoe UI Symbol", monospace';
         ctx.fillStyle = `rgba(168,85,247,${pulse})`;
         ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
         ctx.fillText(pu ? pu.sym : '?', 0, 0);
@@ -4750,7 +4753,7 @@ function drawParticles() {
         ctx.shadowColor = '#00f5ff'; ctx.shadowBlur = 10;
         ctx.beginPath(); ctx.arc(0, 0, d.r, 0, Math.PI * 2);
         ctx.strokeStyle = '#00f5ff'; ctx.lineWidth = 1; ctx.stroke();
-        ctx.font = 'bold 9px Nova Square, monospace';
+        ctx.font = 'bold 9px Nova Square, "Segoe UI Symbol", monospace';
         ctx.fillStyle = '#00f5ff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
         const item = STRINGS.items[d.key];
         ctx.fillText(item ? item.sym : '?', 0, 0);
@@ -4787,7 +4790,7 @@ function drawParticles() {
       ctx.closePath(); ctx.stroke();
       // Symbol
       const pu = STRINGS.powerups[pod.puKey];
-      ctx.font = 'bold 13px Nova Square, monospace';
+      ctx.font = 'bold 13px Nova Square, "Segoe UI Symbol", monospace';
       ctx.fillStyle = `rgba(0,245,255,${0.8 + 0.2 * pulse})`;
       ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
       ctx.shadowColor = '#00f5ff'; ctx.shadowBlur = 8;
@@ -4801,7 +4804,7 @@ function drawParticles() {
       f.y += f.vy * 0.016; f.life -= 0.016;
       ctx.save();
       ctx.globalAlpha = Math.min(1, f.life * 2);
-      ctx.font = 'bold 11px Nova Square, monospace';
+      ctx.font = 'bold 11px Nova Square, "Segoe UI Symbol", monospace';
       ctx.fillStyle = f.color; ctx.textAlign = 'center';
       ctx.shadowColor = f.color; ctx.shadowBlur = 6;
       ctx.fillText(f.text, f.x, f.y);
