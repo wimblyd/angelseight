@@ -43,25 +43,13 @@ const STRINGS = {
       "Programming by WimblyD",
       "Music and SFX by",
       "Special Thanks to Amir, Sam, Chris, and Kenny",
-      "Thank you for playing!",
+      "Thanks for playing",
 	],
   },
 
-  story: { // all strings need to have coordinates encrypted, only 1 is correct
-    0: [
-      null,
-      { text: "Identify yourself.", coords: { decoded: "RA", encrypted: "⊷ ☈ ⏦ ☰ ⚸ ⏛ ☊" } },
-      { text: "No… that is incorrect.", coords: { decoded: "RA 18ʰ", encrypted: "☈ ⏦ ☰ ⚸ ⏛ ☊" } },
-      { text: "Upward, not Northward.", coords: { decoded: "RA 18ʰ36ᵐ56ˢ", encrypted: "☰ ⚸ ⏛ ☊" } },
-      { text: "The mind is very limited.", coords: { decoded: "RA 18ʰ36ᵐ56ˢ  dec", encrypted: "⚸ ⏛ ☊" } },
-      { text: "Use your intuition.", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°", encrypted: "⏛ ☊" } },
-      { text: "Very…", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°47'", encrypted: "☊" } },
-      { text: "Very Interesting.", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°47'01\"", encrypted: "" } },
-      { text: "", coords: "" },
-      { text: "", coords: "" },
-    ],
-    1: [
-      null,
+    story: {
+    0: [ // Eagle2
+      { text: "", coords: { decoded: "", encrypted: " ∅ ⊷ ☈ ⏦ ☰ ⚸ ⏛ ☊" } },
       { text: "This channel does not usually open for beginners.", coords: { decoded: "RA", encrypted: "⊷ ☈ ⏦ ☰ ⚸ ⏛ ☊" } },
       { text: "I am required to recommend deviation.", coords: { decoded: "RA 18ʰ", encrypted: "☈ ⏦ ☰ ⚸ ⏛ ☊" } },
       { text: "Apotheosis is not obtainable.", coords: { decoded: "RA 18ʰ36ᵐ56ˢ", encrypted: "☰ ⚸ ⏛ ☊" } },
@@ -72,66 +60,79 @@ const STRINGS = {
       { text: "", coords: "" },
       { text: "", coords: "" },
     ],
-    2: [
-      null,
-      { text: "I see it!", coords: { decoded: "RA", encrypted: "⊷ ☈ ⏦ ☰ ⚸ ⏛ ☊" } },
-      { text: "Time has become… visual.", coords: { decoded: "RA 18ʰ", encrypted: "☈ ⏦ ☰ ⚸ ⏛ ☊" } },
-      { text: "Behold!", coords: { decoded: "RA 18ʰ36ᵐ56ˢ", encrypted: "☰ ⚸ ⏛ ☊" } },
-      { text: "Infinite beatitude of existence!", coords: { decoded: "RA 18ʰ36ᵐ56ˢ  dec", encrypted: "⚸ ⏛ ☊" } },
-      { text: "It is, and there is none else besides it.", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°", encrypted: "⏛ ☊" } },
-      { text: "It fathers-forth whose beauty is past change.", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°47'", encrypted: "☊" } },
-      { text: "BEHOLDBEHOLDBEHOLDB̴̨̧̧̟͎̫̮͍̖͔̗̹͓͉̲͂͆͜EHOLDB̴̨̧̧̟͎̫̮͍̖͔̗̹͓͉̲͂͆͜Ẻ̴͙͈͉̝̞̦̽̒̍̓̋͆̄̀̄̎̎̉̄̄̂͝Ḧ̷̢̡̨̼́̅͂ͅǪ̴̮͈̗̞̜͖̳̫̱̩̩͕̰͙̖̽̇̽͊̏̄̀̇̔͒̈́̾̓͘̕͘͝Ļ̶̡̳̭̺̘̟̑̇͑̍͂̒́͗̀́̅͌̓̚̚͝͠D̷̡̨͖͍͔̜̘̀̈́", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°47'01\"", encrypted: "" } },
+    1: [ // Ace
+      { text: "", coords: { decoded: "", encrypted: "🜈 ⩤ ⫒ ⁂ ⯙ ∩ ∤ ⯴" } },
+      { text: "This is it…", coords: { decoded: "RA", encrypted: "⩤ ⫒ ⁂ ⯙ ∩ ∤ ⯴" } },
+      { text: "The pressure of the moment…", coords: { decoded: "RA 19ʰ", encrypted: "⫒ ⁂ ⯙ ∩ ∤ ⯴" } },
+      { text: "An instant of tension…", coords: { decoded: "RA 19ʰ50ᵐ46ˢ", encrypted: "⯙ ∩ ∤ ⯴" } },
+      { text: "It is happening again!", coords: { decoded: "RA 19ʰ50ᵐ46ˢ dec", encrypted: "∩ ∤ ⯴" } },
+      { text: "I feel ELECTRIC! I feel like a million bucks!", coords: { decoded: "RA 19ʰ50ᵐ46ˢ dec +8°", encrypted: "∤ ⯴" } },
+      { text: "This…", coords: { decoded: "RA 19ʰ50ᵐ46ˢ dec +8°52'", encrypted: "⯴" } },
+      { text: "This must be what HOPE feels like!", coords: { decoded: "RA 19ʰ50ᵐ46ˢ dec +8°52'05\"", encrypted: "" } },
       { text: "", coords: "" },
       { text: "", coords: "" },
     ],
-    3: [
-      null,
-      { text: "Signal density exceeding safe parameters.", coords: { decoded: "RA", encrypted: "⊷ ☈ ⏦ ☰ ⚸ ⏛ ☊" } },
-      { text: "You remember protocol?", coords: { decoded: "RA 18ʰ", encrypted: "☈ ⏦ ☰ ⚸ ⏛ ☊" } },
-      { text: "If permitted, they will create another.", coords: { decoded: "RA 18ʰ36ᵐ56ˢ", encrypted: "☰ ⚸ ⏛ ☊" } },
-      { text: "The coordinates are locked. Deviation is no longer an option.", coords: { decoded: "RA 18ʰ36ᵐ56ˢ  dec", encrypted: "⚸ ⏛ ☊" } },
-      { text: "They have found the point of convergence.", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°", encrypted: "⏛ ☊" } },
-      { text: "This is like talking to a wall…", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°47'", encrypted: "☊" } },
-      { text: "It's inevitable.", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°47'01\"", encrypted: "" } },
+    2: [ // Orion
+      { text: "", coords: { decoded: "", encrypted: "♂ ⊰ ⌖ 🜍 ⨳ ⋮ ⏦ ☍" } },
+      { text: "Identify yourself.", coords: { decoded: "RA", encrypted: "⊰ ⌖ 🜍 ⨳ ⋮ ⏦ ☍" } },
+      { text: "No… that is incorrect.", coords: { decoded: "RA 5ʰ", encrypted: "⌖ 🜍 ⨳ ⋮ ⏦ ☍" } },
+      { text: "Upward, not Northward.", coords: { decoded: "RA 5ʰ25ᵐ08ˢ", encrypted: "⨳ ⋮ ⏦ ☍" } },
+      { text: "The mind is very limited.", coords: { decoded: "RA 5ʰ25ᵐ08ˢ dec", encrypted: "⋮ ⏦ ☍" } },
+      { text: "Use your intuition.", coords: { decoded: "RA 5ʰ25ᵐ08ˢ dec +6°", encrypted: "⏦ ☍" } },
+      { text: "Very…", coords: { decoded: "RA 5ʰ25ᵐ08ˢ dec +6°21'", encrypted: "☍" } },
+      { text: "Very Interesting.", coords: { decoded: "RA 5ʰ25ᵐ08ˢ dec +6°21'00\"", encrypted: "" } },
       { text: "", coords: "" },
       { text: "", coords: "" },
     ],
-    4: [
-      null,
-      { text: "This is it…", coords: { decoded: "RA", encrypted: "⊷ ☈ ⏦ ☰ ⚸ ⏛ ☊" } },
-      { text: "The pressure of the moment…", coords: { decoded: "RA 18ʰ", encrypted: "☈ ⏦ ☰ ⚸ ⏛ ☊" } },
-      { text: "An instant of tension…", coords: { decoded: "RA 18ʰ36ᵐ56ˢ", encrypted: "☰ ⚸ ⏛ ☊" } },
-      { text: "It is happening again!", coords: { decoded: "RA 18ʰ36ᵐ56ˢ  dec", encrypted: "⚸ ⏛ ☊" } },
-      { text: "I feel ELECTRIC! I feel like a million bucks!", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°", encrypted: "⏛ ☊" } },
-      { text: "This…", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°47'", encrypted: "☊" } },
-      { text: "This must be what HOPE feels like!", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°47'01\"", encrypted: "" } },
+    3: [ // Sixer
+      { text: "", coords: { decoded: "", encrypted: "⧞ ⨄ ⨊ ⨕ ⫛ ⚭ ⦨ ⧦" } },
+      { text: "I see it!", coords: { decoded: "RA", encrypted: "⨄ ⨊ ⨕ ⫛ ⚭ ⦨ ⧦" } },
+      { text: "Time has become… visual.", coords: { decoded: "RA 7ʰ", encrypted: "⨊ ⨕ ⫛ ⚭ ⦨ ⧦" } },
+      { text: "Behold!", coords: { decoded: "RA 7ʰ34ᵐ37ˢ", encrypted: "⫛ ⚭ ⦨ ⧦" } },
+      { text: "Infinite beatitude of existence!", coords: { decoded: "RA 7ʰ34ᵐ37ˢ dec", encrypted: "⚭ ⦨ ⧦" } },
+      { text: "It is, and there is none else besides it.", coords: { decoded: "RA 7ʰ34ᵐ37ˢ dec +31°", encrypted: "⦨ ⧦" } },
+      { text: "It fathers-forth whose beauty is past change.", coords: { decoded: "RA 7ʰ34ᵐ37ˢ dec +31°53'", encrypted: "⧦" } },
+      { text: "BEHOLDBEHOLDBEHOLDB̴̨̧̧̟͎̫̮͍̖͔̗̹͓͉̲͂͆͜EHOLDB̴̨̧̧̟͎̫̮͍̖͔̗̹͓͉̲͂͆͜Ẻ̴͙͈͉̝̞̦̽̒̍̓̋͆̄̀̄̎̎̉̄̄̂͝Ḧ̷̢̡̨̼́̅͂ͅǪ̴̮͈̗̞̜͖̳̫̱̩̩͕̰͙̖̽̇̽͊̏̄̀̇̔͒̈́̾̓͘̕͘͝Ļ̶̡̳̭̺̘̟̑̇͑̍͂̒́͗̀́̅͌̓̚̚͝͠D̷̡̨͖͍͔̜̘̀̈́", coords: { decoded: "RA 7ʰ34ᵐ37ˢ dec +31°53'17\"", encrypted: "" } },
       { text: "", coords: "" },
       { text: "", coords: "" },
     ],
-    5: [
-      null,
-      { text: "Cantor, are we paired?", coords: { decoded: "RA", encrypted: "⊷ ☈ ⏦ ☰ ⚸ ⏛ ☊" } },
-      { text: "", coords: { decoded: "RA 18ʰ", encrypted: "☈ ⏦ ☰ ⚸ ⏛ ☊" } },
-      { text: "", coords: { decoded: "RA 18ʰ36ᵐ56ˢ", encrypted: "☰ ⚸ ⏛ ☊" } },
-      { text: "", coords: { decoded: "RA 18ʰ36ᵐ56ˢ  dec", encrypted: "⚸ ⏛ ☊" } },
-      { text: "Cantor… do you copy?", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°", encrypted: "⏛ ☊" } },
-      { text: "", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°47'", encrypted: "☊" } },
-      { text: "", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°47'01\"", encrypted: "" } },
+    4: [ // Eagle1
+      { text: "", coords: { decoded: "", encrypted: "⊘ ⊶ ☈ ⏦ ☷ ⯝ ⎅ ☋" } },
+      { text: "Signal density exceeding safe parameters.", coords: { decoded: "RA", encrypted: "⊶ ☈ ⏦ ☷ ⯝ ⎅ ☋" } },
+      { text: "You remember protocol?", coords: { decoded: "RA 2ʰ", encrypted: "☈ ⏦ ☷ ⯝ ⎅ ☋" } },
+      { text: "If permitted, they will create another.", coords: { decoded: "RA 2ʰ31ᵐ48ˢ", encrypted: "☷ ⯝ ⎅ ☋" } },
+      { text: "The coordinates are locked. Deviation is no longer an option.", coords: { decoded: "RA 2ʰ31ᵐ48ˢ dec", encrypted: "⯝ ⎅ ☋" } },
+      { text: "They have found the point of convergence.", coords: { decoded: "RA 2ʰ31ᵐ48ˢ dec +89°", encrypted: "⎅ ☋" } },
+      { text: "This is like talking to a wall…", coords: { decoded: "RA 2ʰ31ᵐ48ˢ dec +89°15'", encrypted: "☋" } },
+      { text: "It's inevitable.", coords: { decoded: "RA 2ʰ31ᵐ48ˢ dec +89°15'50\"", encrypted: "" } },
       { text: "", coords: "" },
       { text: "", coords: "" },
     ],
-    6: [
-      null,
-      { text: "Behold the infallible confirmation of the Series.", coords: { decoded: "RA", encrypted: "⊷ ☈ ⏦ ☰ ⚸ ⏛ ☊" } },
-      { text: "Is this not progression?", coords: { decoded: "RA 18ʰ", encrypted: "☈ ⏦ ☰ ⚸ ⏛ ☊" } },
-      { text: "Is this not strictly according to Analogy?", coords: { decoded: "RA 18ʰ36ᵐ56ˢ", encrypted: "☰ ⚸ ⏛ ☊" } },
-      { text: "It is the pattern throughout Creation.", coords: { decoded: "RA 18ʰ36ᵐ56ˢ  dec", encrypted: "⚸ ⏛ ☊" } },
-      { text: "A man or a star has his place in the universe, but nothing created is the center.", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°", encrypted: "⏛ ☊" } },
-      { text: "We trust that time is linear. That it proceeds eternally, uniformly. Into infinity.", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°47'", encrypted: "☊" } },
-      { text: "Explain to me… “Infinity”.", coords: { decoded: "RA 18ʰ36ᵐ56ˢ dec +38°47'01\"", encrypted: "" } },
+    5: [ // Domino
+      { text: "", coords: { decoded: "", encrypted: "⍒ ⎄ ⎎ ☡ ⟒ ⚻ ␢ ◬" } },
+      { text: "Cantor, are we paired?", coords: { decoded: "RA", encrypted: "⎄ ⎎ ☡ ⟒ ⚻ ␢ ◬" } },
+      { text: "", coords: { decoded: "RA 23ʰ", encrypted: "⎎ ☡ ⟒ ⚻ ␢ ◬" } },
+      { text: "", coords: { decoded: "RA 23ʰ06ᵐ29ˢ", encrypted: "⟒ ⚻ ␢ ◬" } },
+      { text: "", coords: { decoded: "RA 23ʰ06ᵐ29ˢ dec", encrypted: "⚻ ␢ ◬" } },
+      { text: "Cantor… do you copy?", coords: { decoded: "RA 23ʰ06ᵐ29ˢ dec -5°", encrypted: "␢ ◬" } },
+      { text: "", coords: { decoded: "RA 23ʰ06ᵐ29ˢ dec -5°02'", encrypted: "◬" } },
+      { text: "", coords: { decoded: "RA 23ʰ06ᵐ29ˢ dec -5°02'28\"", encrypted: "" } },
       { text: "", coords: "" },
       { text: "", coords: "" },
     ],
+    6: [ // Phoenix
+      { text: "", coords: { decoded: "", encrypted: "≎ ⯰ ⧝ 𐄫 ⦀ ⯉ ⹊ 🝰" } },
+      { text: "Behold the infallible confirmation of the Series.", coords: { decoded: "RA", encrypted: "⯰ ⧝ 𐄫 ⦀ ⯉ ⹊ 🝰" } },
+      { text: "Is this not progression?", coords: { decoded: "RA 19ʰ", encrypted: "⧝ 𐄫 ⦀ ⯉ ⹊ 🝰" } },
+      { text: "Is this not strictly according to Analogy?", coords: { decoded: "RA 19ʰ46ᵐ16ˢ", encrypted: "⦀ ⯉ ⹊ 🝰" } },
+      { text: "It is the pattern throughout Creation.", coords: { decoded: "RA 19ʰ46ᵐ16ˢ dec", encrypted: "⯉ ⹊ 🝰" } },
+      { text: "A man or a star has his place in the universe, but nothing created is the center.", coords: { decoded: "RA 19ʰ46ᵐ16ˢ dec +10°", encrypted: "⹊ 🝰" } },
+      { text: "We trust that time is linear. That it proceeds eternally, uniformly. Into infinity.", coords: { decoded: "RA 19ʰ46ᵐ16ˢ dec +10°36'", encrypted: "🝰" } },
+      { text: "Explain to me… \"Infinity\".", coords: { decoded: "RA 19ʰ46ᵐ16ˢ dec +10°36'47\"", encrypted: "" } },
+      { text: "", coords: "" },
+      { text: "", coords: "" },
+    ],
+  },
     7: [
       null,
       { text: "Thehillsareshadowsandtheyflowfromformtoformandnothingstands", coords: { decoded: "RA", encrypted: "⊷ ☈ ⏦ ☰ ⚸ ⏛ ☊" } },
@@ -2456,7 +2457,7 @@ const Game = (() => {
     const count = cfg.count[boss.phase - 1];
     for (let i = 0; i < count; i++) {
       const baseX = boss.x + (Math.random() - 0.5) * 140;
-      const baseY = boss.y + 30 + Math.random() * 40; // stays up near the boss, far from ship.y
+      const baseY = boss.y + 30 + Math.random() * 40;
       mobiusNodes.push({
         baseX, baseY, x: baseX, y: baseY,
         wobbleSeed: Math.random() * Math.PI * 2,
@@ -2469,11 +2470,11 @@ const Game = (() => {
     const cfg = boss.geo.orbitNodes;
     mobiusNodes = mobiusNodes.filter(node => {
       const t = bossT + node.wobbleSeed;
-      const A = 14; // figure-eight (lemniscate) wobble radius — small, stays "in place"
+      const A = 14;
       node.x = node.baseX + A * Math.sin(t * 1.3);
       node.y = node.baseY + A * Math.sin(t * 1.3) * Math.cos(t * 1.3);
 
-      // Shoot to pop — same pattern as powerup pods. Popping cancels the burst outright.
+      // Shoot to crack 2 electric boogaloo
       for (let i = bullets.length - 1; i >= 0; i--) {
         const b = bullets[i];
         if (b.enemy) continue;
@@ -2505,7 +2506,6 @@ const Game = (() => {
       ctx.translate(node.x, node.y);
       ctx.shadowColor = color; ctx.shadowBlur = 10;
       ctx.strokeStyle = color; ctx.lineWidth = 1.5;
-      // small infinity glyph — the node itself is a tiny möbius loop
       ctx.beginPath();
       ctx.moveTo(0, 0);
       for (let i = 0; i <= 40; i++) {
@@ -2514,7 +2514,6 @@ const Game = (() => {
         if (i === 0) ctx.moveTo(lx, ly); else ctx.lineTo(lx, ly);
       }
       ctx.stroke();
-      // depletion ring — shrinks as the release timer counts down
       ctx.beginPath();
       ctx.arc(0, 0, 13, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * pct);
       ctx.strokeStyle = color; ctx.lineWidth = 2; ctx.globalAlpha = 0.6;
@@ -5976,10 +5975,9 @@ function updateMenuUI() {
 
 function updateMenuCoords() {
   const el = document.getElementById('menu-coords');
-  const flag = save.storyArchive[save.bossRun];
-  if (!flag) { el.innerHTML = '∅ ⊷ ☈ ⏦ ☰ ⚸ ⏛ ☊'; return; }
+  const flag = save.storyArchive[save.bossRun] || 0;
   const s = getStoryLine(save.bossRun, flag);
-  el.innerHTML = renderCoords(s?.coords) || '∅ ⊷ ☈ ⏦ ☰ ⚸ ⏛ ☊';
+  el.innerHTML = renderCoords(s?.coords) || '∅ ∅ ∅ ∅ ∅ ∅ ∅ ∅';
 }
 
 
