@@ -20,7 +20,7 @@ const STRINGS = {
     buy: 'BUY', sell: 'SELL', craft: 'CRAFT', launch: 'LAUNCH',
   },
   
-  apotheosis: { // these strings need to be written
+  apotheosis: {
     intro: [
       "T",
 		"To",
