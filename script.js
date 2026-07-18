@@ -132,7 +132,6 @@ const STRINGS = {
       { text: "", coords: "" },
       { text: "", coords: "" },
     ],
-  },
     7: [
       null,
       { text: "Thehillsareshadowsandtheyflowfromformtoformandnothingstands", coords: { decoded: "RA", encrypted: "⊷ ☈ ⏦ ☰ ⚸ ⏛ ☊" } },
